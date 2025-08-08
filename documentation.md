@@ -1,0 +1,9 @@
+# What is this?
+ImportLevelsToSDCard.ps1 is a small powershell application meant to make transferring downloaded levels from SMM1-Level-Downloader to an SD card easier. It lets you pick a source directory (default location is \<Location of folder\>\smm1-level-downloader-win32-x64\resources\app\SMMDownloader\Data\DownloadCache) and uses the this path "\<DriveLetter\>:\wiiu\backups\Super Mario Maker [\<title id based on region\>]\\<memorySlotNumber\>\8000000c" on the sd card to find the course folders which will be overwritten.
+
+# How do I use this?
+ImportLevelsToSDCard is designed to be used with SaveMii (https://github.com/w3irDv/savemii). SaveMii is an app that allows you to "backup" savedata from a game on your Wii U to an SD card and "restore" savedata from an SD card to your Wii U. You can download SaveMii from your computer or directly to your Wii U through the Homebrew App Store (https://github.com/fortheusers/hb-appstore).
+
+To start, you will need to "backup" your savedata from the Super Mario Maker game on your Wii U to your SD card. Navigate to "Wii U Title Management / vWii Title Management" then select "Super Mario Maker". Next select "backup" and choose which profile's savedata on the Wii U you are backing up, as well as the backup slot number. Write down or remember the slot number since you will need that later.
+
+After you have backed up your savedata, remove your SD card and connect it to your computer. If you havn't already, download your desired levels using SMM1-Level-Downloader. By default, they should download to "<Location of folder\>\smm1-level-downloader-win32-x64\resources\app\SMMDownloader\Data\DownloadCache".

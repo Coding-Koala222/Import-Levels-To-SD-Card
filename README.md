@@ -24,6 +24,8 @@ To open powershell, just run `pwsh` in Command Prompt or search for PowerShell 7
 
 Congratulations! You now have the latest stable version of powershell.
 
+If you are on Windows and haven't run powershell scripts before, you will need to open powershell (instructions above) and run this code to enable running external scripts (info here: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.5): `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
 #### macOS Installation
 To begin, you must have Homebrew (https://brew.sh/) installed. Here is the command to install it (All commands taken from https://learn.microsoft.com/en-gb/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.4#install-using-homebrew).
 
@@ -58,7 +60,13 @@ This method may take some time depending on how many levels you want to import, 
 To use this method, first open the level editor. Next, save whatever is there as a new level on the coursebot and place the level on the coursebot where you want your first imported level to be. It doesn't matter what this level is since it will be overwritten. Save the current level on the level editor as a new level again and place it where you want your second imported level to be. Continue doing this for the amount of levels you will import. Make sure to remember how many of these placeholder levels you have made once you finish.
 
 ## Step 2 - Backup savedata using SaveMii
-The next step is to "backup" your savedata from the Super Mario Maker game on your Wii U to your SD card. Open SaveMii and navigate to "Wii U Title Management / vWii Title Management" then select "Super Mario Maker". Next select "backup" and choose which profile's savedata on the Wii U you are backing up, as well as the backup slot number. Write down or remember the slot number since you will need that later.
+The next step is to "backup" your savedata from the Super Mario Maker game on your Wii U to your SD card. Open SaveMii and navigate to "Wii U Title Management / vWii Title Management" then select "Super Mario Maker". Next select "backup" and choose which profile's savedata on the Wii U you are backing up, as well as the backup slot number. Write down or remember the slot number since you will need that later. This will be your working (changing) slot
 
+### Step 2.5 (Only if you choose method 1 in step 1)
+Repeat step 2, but this time choose a different SaveMii slot number. You should write this number down as well. This will be your archive slot.
 
-After you have backed up your savedata, remove your SD card and connect it to your computer. If you havn't already, download your desired levels using SMM1-Level-Downloader. By default, they should download to "<Location of folder\>\smm1-level-downloader-win32-x64\resources\app\SMMDownloader\Data\DownloadCache".
+## Step 3 - Choose and download levels
+If you haven't already, this is the time to download your desired levels using SMM1-Level-Downloader. By default, they should download to `<Location of folder>\smm1-level-downloader-win32-x64\resources\app\SMMDownloader\Data\DownloadCache`.
+
+## Step 4 - Run powershell script
+Open powershell (instructions above) and copy and paste the file path on your computer leading to `ImportLevelsToSDCard.ps1` into powershell. The .ps1 file extension is used for powershell scripts. The script should now work automatically aside from asking you some questions. It will ask for the source directory which is where your levels got downloaded to, the drive letter associated with your SD card, and the three letter abbriviation for the region of your game. You may choose to have the script remember these settings, and if you do you can

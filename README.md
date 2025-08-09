@@ -1,6 +1,8 @@
 # Import-Levels-To-SD-Card
 A powershell application for use with HerobrineTV's SMM1-Level-Downloader
 
+## Note: Only WindowsOS is supported at this time
+
 # What is this?
 ImportLevelsToSDCard.ps1 is a small powershell application meant to make transferring downloaded levels from SMM1-Level-Downloader to an SD card easier.
 
